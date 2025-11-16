@@ -1,0 +1,511 @@
+/* ---------------------------------------------------
+   Dante Propolis — After Login
+   Clean stylesheet with unified brand header/footer,
+   responsive full-bleed strips, and overflow guards.
+----------------------------------------------------*/
+
+/* 0) RESET RINGAN */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* cegah scroll horizontal */
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* 1) ROOT CONTAINER */
+.home-after-login {
+  position: relative;
+  background: #9b9b9b;
+  height: 4121px; /* mengikuti layout fixed kamu */
+  overflow: hidden;
+  max-width: 100vw; /* guard */
+}
+
+/* 2) FULL-BLEED STRIPS (pita) */
+.rectangle-1,   /* navbar bg */
+.rectangle-2,   /* hero bg */
+.rectangle-10,  /* strip merah keunggulan */
+.rectangle-15,  /* bg Produk Terlaris */
+.rectangle-25,  /* bg Cara Pemesanan */
+.rectangle-29,  /* bg FAQ */
+.rectangle-39,  /* bg Contact gradient */
+.rectangle-402  /* bg Footer gradient */ {
+  left: 0 !important;
+  width: 100vw !important;
+  position: absolute;
+}
+
+/* =========================================
+   NAVBAR / HEADER
+========================================= */
+.navbar { position: absolute; inset: 0; }
+
+.rectangle-1 {
+  background: #ffffff;
+  height: 100px;
+  top: 0;
+}
+
+/* BRAND — SAMA PERSIS UNTUK HEADER & FOOTER */
+:root{
+  --brand-font: "Racing Sans One", sans-serif;
+  --ui-font: "Poppins", sans-serif;
+  --brand-red: #D2001A;
+  --brand-blue:#093FB4;
+}
+
+/* Blok brand generik */
+.brand {
+  position: absolute;
+  left: 150px;
+  top: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 490px;
+}
+
+.brand__title {
+  font-family: var(--brand-font);
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: clamp(28px, 2.6vw, 40px);
+  letter-spacing: .2px;
+}
+
+.brand__title .brand__dante { color: var(--brand-red); }
+.brand__title .brand__propolis { color: var(--brand-blue); margin-left: 6px; }
+
+.brand__subtitle {
+  font-family: var(--ui-font);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #000000; /* khusus header */
+  margin-left: 100px; /* 🔹 menjorok ke dalam */
+}
+
+/* Tambahan: bagian BRITISH PROPOLIS pakai Racing Sans One */
+.brand__subtitle .subtitle__bp {
+  font-family: var(--brand-font); /* Racing Sans One */
+  font-style: italic;             /* miring seperti logo */
+  font-weight: 700;
+  color: var(--brand-blue);       /* default biru, bisa di-split kalau mau beda */
+  margin-left: 6px;
+}
+
+/* Jika kamu pisahkan kata BRITISH & PROPOLIS, bisa begini: */
+.brand__subtitle .subtitle__bp-blue {
+  font-family: var(--brand-font);
+  font-weight: 700;
+  color: var(--brand-blue);
+  margin-left: 6px;
+}
+
+.brand__subtitle .subtitle__bp-red {
+  font-family: var(--brand-font);
+  font-weight: 700;
+  color: var(--brand-red);
+  margin-left: 2px;
+}
+
+
+/* Header nav items (posisi dari file kamu) */
+.produk2, .beranda2, .tentang-kami2, .cari-produk {
+  font-family: var(--ui-font);
+  font-weight: 700;
+  font-size: 20px;
+  display: flex; align-items: center; justify-content: center;
+  position: absolute;
+  height: 40px;
+}
+
+.produk2      { left: 1090px; top: 30px; width: 100px; color:#000; }
+.beranda2     { left: 730px;  top: 30px; width: 100px; color: var(--brand-red); }
+.tentang-kami2{ left: 880px;  top: 30px; width: 160px; color:#000; }
+.cari-produk  { left: 1450px; top: 30px; width: 150px; color:#000; justify-content:flex-start; }
+
+.search        { position:absolute; left:1400px; top:30px;  width:40px; height:40px; object-fit:cover; }
+.shopping-cart { position:absolute; left:1640px; top:25px;  width:50px; height:50px; object-fit:cover; }
+.profile       { position:absolute; left:1725px; top:25px;  width:50px; height:50px; object-fit:cover; }
+
+/* =========================================
+   HERO
+========================================= */
+.rectangle-2 {
+  background: linear-gradient(180deg, #fff 50%, #d2001a 100%);
+  height: 690px;
+  top: 100px;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.25);
+}
+
+.rectangle-4 {
+  position:absolute; left:1470px; top:140px;
+  width:280px; height:300px; object-fit:cover;
+  border-radius:50px; box-shadow: 15px 15px 1px var(--brand-red);
+}
+.rectangle-7 {
+  position:absolute; left:1474px; top:490px;
+  width:280px; height:240px; object-fit:cover;
+  border-radius:50px; box-shadow: 15px 15px 1px var(--brand-red);
+}
+.rectangle-8 {
+  position:absolute; left:1135px; top:209px;
+  width:280px; height:420px; object-fit:cover;
+  border-radius:50px; box-shadow: 15px 15px 1px var(--brand-red);
+}
+
+.hideline {
+  position:absolute; left:150px; top:220px; width:790px; height:110px;
+  color: var(--brand-red);
+  font-family: "Poppins", sans-serif; font-weight:800; font-size:48px;
+  text-transform: uppercase; display:flex; align-items:center;
+}
+.line-1 {
+  position:absolute; left:150px; top:350px; height:0; width:180px;
+  border-top:1px solid var(--brand-red);
+}
+.sub-hideline {
+  position:absolute; left:150px; top:380px; width:790px; height:90px;
+  color: var(--brand-red);
+  font-size:24px; font-weight:400;
+}
+.rectangle-9 {
+  position:absolute; left:150px; top:520px;
+  width:330px; height:80px; border-radius:50px;
+  background:#d2001a; border:2px solid #fff;
+}
+.shopping-bag { position:absolute; left:172px; top:545px; width:30px; height:30px; object-fit:cover; }
+.belanja-sekarang {
+  position:absolute; left:210px; top:545px; width:250px; height:30px;
+  color:#fff; font-weight:600; font-size:24px; display:flex; align-items:center; justify-content:center;
+}
+
+/* =========================================
+   KEUNGGULAN
+========================================= */
+.rectangle-10 { background:#d2001a; height:590px; top:790px; }
+.selamat-datang-di {
+  position:absolute; left:640px; top:860px; width:640px; height:44px;
+  color:#fff; font-size:55px; font-weight:400; display:flex; align-items:center; justify-content:center;
+}
+.dante-propolis {
+  position:absolute; left:760px; top:920px; width:400px; height:49px;
+  color:#fff; font-family: var(--brand-font); font-size:48px; display:flex; align-items:center; justify-content:center;
+}
+.bee-swarm { position:absolute; left:940px; top:970px; width:40px; height:40px; object-fit:cover; }
+.line-4 { position:absolute; left:990px; top:990px; width:270px; border-top:1px solid #fff; }
+.line-5 { position:absolute; left:660px; top:990px; width:270px; border-top:1px solid #fff; }
+
+.rectangle-14 { position:absolute; left:217px; top:1050px; width:200px; height:200px; object-fit:cover; }
+.distributor-resmi {
+  position:absolute; left:155px; top:1270px; width:317px;
+  color:#fff; font-weight:500; font-size:30px; display:flex; align-items:center; justify-content:center;
+}
+.rectangle-12 { position:absolute; left:869px; top:1050px; width:200px; height:200px; object-fit:cover; }
+.produk-berkualitas {
+  position:absolute; left:807px; top:1270px; width:317px;
+  color:#fff; font-weight:500; font-size:30px; display:flex; align-items:center; justify-content:center;
+}
+.rectangle-13 { position:absolute; left:1510px; top:1050px; width:200px; height:200px; object-fit:cover; }
+.layanan-terpercaya {
+  position:absolute; left:1448px; top:1270px; width:317px;
+  color:#fff; font-weight:500; font-size:30px; display:flex; align-items:center; justify-content:center;
+}
+
+/* =========================================
+   PRODUK TERLARIS
+========================================= */
+.rectangle-15 { background:#f1f1f1; height:659px; top:1381px; }
+.produk-terlaris {
+  position:absolute; left:150px; top:1450px; width:635px; height:50px;
+  color:#d2001a; font-weight:700; font-size:48px; text-transform:uppercase; display:flex; align-items:center;
+}
+.temukan-produk-produk-unggulan-yang-paling-dipercaya-pelanggan-kami {
+  position:absolute; left:150px; top:1510px;
+  color:#000; font-weight:300; font-size:22px; display:flex; align-items:center;
+}
+.rectangle-24 {
+  position:absolute; left:1550px; top:1463px;
+  width:220px; height:74px; border-radius:50px; background:#d2001a;
+}
+.lihat-semua {
+  position:absolute; left:1570px; top:1478px; width:149px; height:44px;
+  color:#fff; font-weight:700; font-size:20px; display:flex; align-items:center; justify-content:center;
+}
+.arrow-1 { position:absolute; left:1718.84px; top:1500px; width:28.65px; height:0; overflow:visible; }
+
+.rectangle-26,
+.rectangle-21,
+.rectangle-22,
+.rectangle-23 {
+  position:absolute; width:320px; height:400px; background:#fff; border:1px solid #d9d9d9;
+}
+.rectangle-26 { left:150px;  top:1570px; }
+.rectangle-21 { left:580px;  top:1570px; }
+.rectangle-22 { left:1020px; top:1570px; }
+.rectangle-23 { left:1450px; top:1570px; }
+
+.rectangle-27,
+.rectangle-18,
+.rectangle-19,
+.rectangle-17 {
+  position:absolute; width:300px; height:310px; object-fit:cover;
+}
+.rectangle-27 { left:160px;  top:1580px; }
+.rectangle-18 { left:590px;  top:1580px; }
+.rectangle-19 { left:1030px; top:1580px; }
+.rectangle-17 { left:1460px; top:1580px; }
+
+.british-propolis-d,
+.steffi-pro,
+.british-propolis-gr,
+.belgie-face-serum {
+  position:absolute; color:#000; font-weight:500; font-size:18px; display:flex; align-items:center;
+}
+.british-propolis-d { left:160px;  top:1900px; width:180px; }
+.steffi-pro         { left:590px;  top:1900px; width:180px; }
+.british-propolis-gr{ left:1030px; top:1900px; width:180px; }
+.belgie-face-serum  { left:1460px; top:1900px; width:180px; }
+
+.rp-250-000,
+.rp-250-0002,
+.rp-250-0003,
+.rp-250-0004 {
+  position:absolute; color:#d2001a; font-weight:700; font-size:24px; display:flex; align-items:center;
+}
+.rp-250-000  { left:160px;  top:1930px; width:180px; }
+.rp-250-0003 { left:590px;  top:1930px; width:180px; }
+.rp-250-0004 { left:1030px; top:1930px; width:170px; }
+.rp-250-0002 { left:1460px; top:1930px; width:180px; }
+
+/* =========================================
+   CARA PEMESANAN
+========================================= */
+.rectangle-25 { background:#f1f1f1; height:580px; top:2040px; }
+.bagaimana-cara-pemesanan {
+  position:absolute; left:574px; top:2110px; width:773px; height:50px;
+  color:#d2001a; font-weight:700; font-size:40px; display:flex; align-items:center; justify-content:center;
+}
+
+.rectangle-263, .rectangle-264, .rectangle-262, .rectangle-265, .rectangle-266 {
+  position:absolute; width:120px; height:120px; object-fit:cover;
+}
+.rectangle-263 { left:190px;  top:2210px; }
+.rectangle-264 { left:537px;  top:2210px; }
+.rectangle-262 { left:900px;  top:2210px; }
+.rectangle-265 { left:1262px; top:2210px; }
+.rectangle-266 { left:1610px; top:2210px; }
+
+.login-daftar, .pilih-produk, .tambah-ke-keranjang, .checkout, .pesanan-dikirim {
+  position:absolute; font-weight:600; font-size:20px; display:flex; align-items:center; justify-content:center; width:230px; height:30px; color:#000;
+}
+.login-daftar        { left:150px;  top:2340px; width:200px; }
+.pilih-produk        { left:497px;  top:2340px; width:200px; }
+.tambah-ke-keranjang { left:845px;  top:2340px; }
+.checkout            { left:1222px; top:2340px; width:200px; }
+.pesanan-dikirim     { left:1570px; top:2340px; width:200px; }
+
+.masuk-ke-akunmu-atau-buat-akun-baru,
+.telusuri-dan-klik-produk-yang-kamu-inginkan,
+.klik-tambah-ke-keranjang-atau-pesan-sekarang,
+.periksa-pesanan-pilih-metode-pembayaran-dan-unggah-bukti-bayar,
+.tunggu-pesananmu-tiba-dengan-aman {
+  position:absolute; font-weight:400; font-size:15px; color:#000; display:flex; align-items:center; justify-content:center;
+}
+.masuk-ke-akunmu-atau-buat-akun-baru { left:150px;  top:2370px; width:200px; height:50px; }
+.telusuri-dan-klik-produk-yang-kamu-inginkan { left:497px;  top:2370px; width:200px; height:50px; }
+.klik-tambah-ke-keranjang-atau-pesan-sekarang { left:860px; top:2370px; width:200px; height:70px; }
+.periksa-pesanan-pilih-metode-pembayaran-dan-unggah-bukti-bayar { left:1222px; top:2370px; width:200px; height:70px; }
+.tunggu-pesananmu-tiba-dengan-aman { left:1570px; top:2370px; width:200px; height:50px; }
+
+.rectangle-28 {
+  position:absolute; left:840px; top:2490px;
+  width:240px; height:60px; border-radius:50px;
+  background: linear-gradient(90deg, #d2001a 0%, #b40016 50%, #950012 100%);
+}
+.pesan-sekarang {
+  position:absolute; left:860px; top:2505px; width:200px; height:30px;
+  color:#fff; font-weight:700; font-size:22px; display:flex; align-items:center; justify-content:center;
+}
+
+/* =========================================
+   FAQ
+========================================= */
+.rectangle-29 {
+  background: linear-gradient(180deg, #f1f1f1 0%, #fff 100%);
+  height:659px; top:2620px;
+}
+.fequently-asked-question-faq {
+  position:absolute; left:960px; top:2690px; width:810px; height:60px;
+  color:#d2001a; font-weight:700; font-size:45px; text-transform:uppercase; display:flex; align-items:center; justify-content:flex-end;
+}
+
+.rectangle-30 {
+  position:absolute; left:980px; top:2770px; width:790px; height:120px;
+  background:#d9d9d9; border-radius:10px;
+}
+.apakah-produk-dante-propolis-aman-digunakan-setiap-hari {
+  position:absolute; left:1000px; top:2790px; width:630px; height:20px;
+  color:#fff; font-weight:700; font-size:18px; display:flex; align-items:center;
+}
+.ya-produk-kami-terbuat-dari-bahan-alami-dan-sudah-teruji-aman-untuk-penggunaan-harian-sesuai-aturan-pakai {
+  position:absolute; left:1000px; top:2820px; width:630px; height:50px;
+  color:#fff; font-weight:400; font-size:18px; display:flex; align-items:center;
+}
+.line-27 { position:absolute; left:1720px; top:2800px; width:30px; border-top:3px solid #fff; }
+
+.rectangle-31, .rectangle-32, .rectangle-33, .rectangle-34 {
+  position:absolute; left:980px; width:790px; height:60px;
+  border:1px solid #9b9b9b; border-radius:10px; background:transparent;
+}
+.rectangle-31 { top:2910px; }
+.rectangle-32 { top:2990px; }
+.rectangle-33 { top:3070px; }
+.rectangle-34 { top:3150px; }
+
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak,
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak2,
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak3,
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak4 {
+  position:absolute; left:1000px; width:640px; height:20px;
+  color:#000; font-weight:700; font-size:18px; display:flex; align-items:center;
+}
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak  { top:2930px; }
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak2 { top:3010px; }
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak3 { top:3090px; }
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak4 { top:3170px; }
+
+.line-28, .line-29, .line-31, .line-33 {
+  position:absolute; left:1720px; width:30px; border-top:3px solid #d2001a;
+}
+.line-28 { top:2942px; } .line-29 { top:3022px; } .line-31 { top:3102px; } .line-33 { top:3182px; }
+.line-6, .line-30, .line-32, .line-34 {
+  position:absolute; left:1734px; width:30px; border-top:3px solid #d2001a; transform:rotate(90deg);
+}
+.line-6  { top:2925px; } .line-30{ top:3005px; } .line-32{ top:3085px; } .line-34{ top:3165px; }
+
+.rectangle-342 {
+  position:absolute; left:150px; top:2890px; width:790px; height:320px;
+  background:#f1f1f1; border-radius:0 0 50px 50px;
+}
+.rectangle-35 { position:absolute; left:495px; top:2890px; width:100px; height:100px; object-fit:cover; }
+.apakah-punya-pertanyaan-lain {
+  position:absolute; left:284px; top:3010px; width:522px; height:40px;
+  color:#000; font-weight:700; font-size:30px; display:flex; align-items:center; justify-content:center;
+}
+.jangan-ragu-untuk-menghubungi-kami-tim-kami-siap-membantu-dengan-cepat-dan-ramah {
+  position:absolute; left:294px; top:3070px; width:502px; height:40px;
+  color:#000; font-weight:400; font-size:18px; display:flex; align-items:center; justify-content:center;
+}
+.rectangle-38 {
+  position:absolute; left:452px; top:3130px; width:187px; height:60px;
+  border-radius:50px; background:#d2001a;
+}
+.hubungi-kami {
+  position:absolute; left:451px; top:3150px; width:189px; height:20px;
+  color:#fff; font-weight:700; font-size:22px; display:flex; align-items:center; justify-content:center;
+}
+.rectangle-37 { position:absolute; left:151px; top:2700px; width:789px; height:180px; object-fit:cover; }
+
+/* =========================================
+   CONTACT
+========================================= */
+.rectangle-39 {
+  background: linear-gradient(180deg, #fff 0%, #e9808c 50%, #d2001a 100%);
+  height:390px; top:3280px;
+}
+.rectangle-40 { position:absolute; left:160px; top:3280px; width:510px; height:390px; object-fit:cover; }
+.tetap-terhubung-dengan-kami {
+  position:absolute; left:950px; top:3320px; width:820px; height:72px;
+  color:#d2001a; font-weight:700; font-size:48px; -webkit-text-stroke:1px #fff; display:flex; align-items:center;
+}
+.kami-senang-bisa-lebih-dekat-denganmu {
+  position:absolute; left:950px; top:3410px; width:641px; height:40px;
+  color:#fff; font-weight:400; font-size:24px; display:flex; align-items:center;
+}
+.hubungi-kami-untuk-konsultasi-produk-pemesanan-atau-kerja-sama {
+  position:absolute; left:950px; top:3458px; width:496px; height:40px;
+  color:#fff; font-weight:400; font-size:16px; display:flex; align-items:center;
+}
+.whats-app, .email, .instagram {
+  position:absolute; width:60px; height:60px; object-fit:cover; top:3530px;
+}
+.whats-app  { left:950px;  }
+.email      { left:1050px; }
+.instagram  { left:1150px; }
+
+/* =========================================
+   FOOTER
+========================================= */
+.rectangle-402 {
+  background: linear-gradient(180deg, rgba(210,0,26,1) 40%, rgba(88,0,11,1) 100%);
+  height:450px; top:3670px;
+}
+
+/* Brand footer (warna putih penuh, tapi struktur sama) */
+.brand--footer { left:150px; top:3730px; width:490px; }
+.brand--footer .brand__title { color:#fff; }
+.brand--footer .brand__title .brand__dante,
+.brand--footer .brand__title .brand__propolis { color:#fff !important;  margin-left: 85px;           /* 🔹 samain indent di footer */ }
+.brand--footer .brand__subtitle,
+.brand--footer .brand__subtitle * { color:#fff !important; }
+
+.dante-propolis-adalah-distributor-resmi-british-propolis-dan-produk-kesehatan-alami-terpercaya-kami-berkomitmen-menyediakan-produk-berkualitas-tinggi-untuk-mendukung-gaya-hidup-sehat-anda {
+  position:absolute; left:150px; top:3824px; width:490px; height:216px;
+  color:#fff; font-weight:400; font-size:24px; text-align:justify;
+}
+
+.navigasi-cepat, .informasi-toko {
+  position:absolute; color:#fff; font-weight:600; font-size:24px; text-align:justify;
+}
+.navigasi-cepat { left:960px;  top:3780px; width:210px; height:30px; }
+.informasi-toko { left:1360px; top:3780px; width:210px; height:30px; }
+
+.beranda, .produk, .tentang-kami,
+.jl-contoh-no-45-jakarta, ._0812-3456-7891, .support-dantepropolis-com, .jam-operasional-07-00-17-00-wib {
+  position:absolute; color:#fff; font-weight:400; font-size:20px; text-align:justify;
+}
+.home, .product, .bee, .map, .phone, .email2, .clock {
+  position:absolute; width:30px; height:30px; object-fit:cover;
+}
+
+/* kolom kiri navigasi cepat */
+.home     { left:960px;  top:3830px; }
+.beranda  { left:1000px; top:3830px; width:177px; height:30px; }
+.product  { left:960px;  top:3880px; }
+.produk   { left:1000px; top:3880px; width:210px; height:30px; }
+.bee      { left:960px;  top:3932px; }
+.tentang-kami { left:1000px; top:3930px; width:210px; height:30px; }
+
+/* kolom kanan info toko */
+.map      { left:1360px; top:3830px; }
+.jl-contoh-no-45-jakarta { left:1400px; top:3830px; width:268px; height:30px; }
+.phone    { left:1360px; top:3880px; }
+._0812-3456-7891 { left:1400px; top:3880px; width:268px; height:30px; }
+.email2   { left:1360px; top:3930px; }
+.support-dantepropolis-com { left:1400px; top:3928px; width:328px; height:30px; }
+.clock    { left:1360px; top:3980px; }
+.jam-operasional-07-00-17-00-wib { left:1402px; top:3980px; width:368px; height:30px; }
+
+/* garis & copyright */
+.line-13 {
+  position:absolute; left:150px; right:150px; top:4060px; height:0;
+  border-top:1px solid #fff; width:auto;
+}
+._2025-dante-propolis-all-rights-reserved-project-by-2-itsolution {
+  position:absolute; left:669px; top:4075px; width:582px; height:30px;
+  color:#d9d9d9; font-weight:400; font-size:18px; text-align:center;
+}
+
+/* =========================================
+   MEDIA / IMG SAFETY
+========================================= */
+img, video, svg, canvas { max-width: 100%; height: auto; display:block; }
+
+

@@ -1,0 +1,236 @@
+/* RESET */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0;overflow-x:hidden;font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+
+/* ROOT */
+.home-before-login{background:#9b9b9b;position:relative;overflow:hidden;height:4121px}
+
+/* LAYERING UTAMA */
+.rectangle-1,.rectangle-2,.rectangle-10,.rectangle-15,.rectangle-25,.rectangle-29,.rectangle-39,.rectangle-402{position:absolute;left:0}
+.rectangle-1{top:0;height:100px;width:1920px;background:#fff;z-index:10}
+.rectangle-2{top:100px;height:690px;width:1920px;background:linear-gradient(180deg,#fff 50%,#d2001a 100%);box-shadow:inset 0 1px 4px rgba(0,0,0,.25);z-index:10}
+
+/* BRAND HEADER */
+.dante-propolis{
+  position:absolute;left:150px;top:17px;width:313px;height:49px;
+  text-align:right;font-family:"Racing Sans One",sans-serif;font-size:40px;font-weight:400;line-height:1;z-index:20
+}
+.dante-propolis-span{color:#d2001a}
+.dante-propolis-span2{color:#093fb4}
+
+/* Tagline (indent/menjorok seperti Figma) */
+.distributor-resmi-british-propolis{
+  position:absolute;left:235px;top:61px;width:228px;height:21px;
+  text-align:right;font-size:12px;font-weight:400;line-height:1.1;z-index:20
+}
+.distributor-resmi-british-propolis-span{color:#000;font-family:"Poppins",sans-serif}
+.distributor-resmi-british-propolis-span2{margin:0 2px;display:inline-block}
+.distributor-resmi-british-propolis-span3{color:#093fb4;font-family:"Racing Sans One",sans-serif}
+.distributor-resmi-british-propolis-span4{color:#d2001a;font-family:"Racing Sans One",sans-serif}
+
+/* NAV / SEARCH / LOGIN (pastikan di atas header bg) */
+.rounded-rectangle{
+  position:absolute;left:1650px;top:30px;width:120px;height:40px;border-radius:50px;background:#d2001a;z-index:20
+}
+.login{
+  position:absolute;left:1660px;top:40px;width:100px;height:20px;display:flex;align-items:center;justify-content:center;
+  color:#fff;font:700 20px "Poppins",sans-serif;z-index:21
+}
+.produk,.beranda,.tentang-kami,.cari-produk{
+  position:absolute;height:40px;display:flex;align-items:center;justify-content:center;
+  font-family:"Poppins",sans-serif;font-weight:700;font-size:20px;z-index:20
+}
+.produk{left:1090px;top:30px;width:100px;color:#000}
+.beranda{left:730px;top:30px;width:100px;color:#d2001a}
+.tentang-kami{left:880px;top:30px;width:160px;color:#000}
+.search{position:absolute;left:1400px;top:30px;width:40px;height:40px;object-fit:cover;z-index:20}
+.cari-produk{left:1450px;top:30px;width:150px;justify-content:flex-start;color:#000}
+
+/* HERO IMAGES & TEXT */
+.rectangle-4,.rectangle-7,.rectangle-8{position:absolute;border-radius:50px;object-fit:cover;box-shadow:15px 15px 1px #d2001a;z-index:11}
+.rectangle-4{left:1470px;top:140px;width:280px;height:300px}
+.rectangle-7{left:1474px;top:490px;width:280px;height:240px}
+.rectangle-8{left:1135px;top:209px;width:280px;height:420px}
+.hideline{
+  position:absolute;left:150px;top:220px;width:790px;height:110px;display:flex;align-items:center;z-index:11;
+  color:#d2001a;font:800 48px "Poppins",sans-serif;text-transform:uppercase
+}
+.line-1{position:absolute;left:150px;top:350px;width:180px;height:0;border-top:1px solid #d2001a;z-index:11}
+.sub-hideline{
+  position:absolute;left:150px;top:380px;width:790px;height:90px;z-index:11;
+  color:#d2001a;font:400 24px "Poppins",sans-serif;text-align:justify
+}
+.rectangle-9{position:absolute;left:150px;top:520px;width:330px;height:80px;border-radius:50px;background:#d2001a;border:2px solid #fff;z-index:11}
+.shopping-bag{position:absolute;left:172px;top:545px;width:30px;height:30px;object-fit:cover;z-index:12}
+.belanja-sekarang{
+  position:absolute;left:210px;top:545px;width:250px;height:30px;display:flex;align-items:center;justify-content:center;z-index:12;
+  color:#fff;font:600 24px "Poppins",sans-serif
+}
+
+/* STRIP MERAH KEUNGGULAN */
+.rectangle-10{top:790px;width:1920px;height:590px;background:#d2001a;z-index:10}
+.selamat-datang-di{position:absolute;left:640px;top:860px;width:640px;height:44px;display:flex;align-items:center;justify-content:center;color:#fff;font:400 55px "Poppins",sans-serif;z-index:11}
+.dante-propolis2{position:absolute;left:760px;top:920px;width:400px;height:49px;display:flex;align-items:center;justify-content:center;color:#fff;font:400 48px "Racing Sans One",sans-serif;z-index:11}
+.bee-swarm{position:absolute;left:940px;top:970px;width:40px;height:40px;object-fit:cover;z-index:11}
+.line-4,.line-5{position:absolute;top:990px;width:270px;height:0;border-top:1px solid #fff;z-index:11}
+.line-4{left:990px}.line-5{left:660px}
+.rectangle-14,.rectangle-12,.rectangle-13{position:absolute;width:200px;height:200px;object-fit:cover;z-index:11}
+.rectangle-14{left:217px;top:1050px}
+.rectangle-12{left:869px;top:1050px}
+.rectangle-13{left:1510px;top:1050px}
+.distributor-resmi,.produk-berkualitas,.layanan-terpercaya{
+  position:absolute;color:#fff;text-align:center;font:500 30px "Poppins",sans-serif;width:317px;height:39px;display:flex;align-items:center;justify-content:center;z-index:11
+}
+.distributor-resmi{left:155px;top:1270px}
+.produk-berkualitas{left:807px;top:1270px}
+.layanan-terpercaya{left:1448px;top:1270px}
+
+/* PRODUK TERLARIS */
+.rectangle-15{top:1381px;width:1920px;height:659px;background:#f1f1f1;z-index:10}
+.produk-terlaris{position:absolute;left:150px;top:1450px;width:635px;height:50px;display:flex;align-items:center;color:#d2001a;font:700 48px "Poppins",sans-serif;text-transform:uppercase;z-index:11}
+.temukan-produk-produk-unggulan-yang-paling-dipercaya-pelanggan-kami{position:absolute;left:150px;top:1510px;color:#000;font:300 22px "Poppins",sans-serif;display:flex;align-items:center;z-index:11}
+.rectangle-24{position:absolute;left:1550px;top:1463px;width:220px;height:74px;border-radius:50px;background:#d2001a;z-index:11}
+.lihat-semua{position:absolute;left:1570px;top:1478px;width:149px;height:44px;display:flex;align-items:center;justify-content:center;color:#fff;font:700 20px "Poppins",sans-serif;z-index:12}
+.arrow-1{position:absolute;left:1718.84px;top:1500px;width:28.65px;height:0;overflow:visible;z-index:12}
+
+.rectangle-26,.rectangle-21,.rectangle-22,.rectangle-23{
+  position:absolute;width:320px;height:400px;background:#fff;border:1px solid #d9d9d9;z-index:11
+}
+.rectangle-26{left:150px;top:1570px}
+.rectangle-21{left:580px;top:1570px}
+.rectangle-22{left:1020px;top:1570px}
+.rectangle-23{left:1450px;top:1570px}
+.rectangle-27,.rectangle-18,.rectangle-19,.rectangle-17{position:absolute;width:300px;height:310px;object-fit:cover;z-index:12}
+.rectangle-27{left:160px;top:1580px}
+.rectangle-18{left:590px;top:1580px}
+.rectangle-19{left:1030px;top:1580px}
+.rectangle-17{left:1460px;top:1580px}
+.british-propolis-d,.steffi-pro,.british-propolis-gr,.belgie-face-serum{
+  position:absolute;color:#000;font:500 18px "Poppins",sans-serif;display:flex;align-items:center;z-index:12
+}
+.british-propolis-d{left:160px;top:1900px;width:180px}
+.steffi-pro{left:590px;top:1900px;width:180px}
+.british-propolis-gr{left:1030px;top:1900px;width:180px}
+.belgie-face-serum{left:1460px;top:1900px;width:180px}
+.rp-250-000,.rp-250-0002,.rp-250-0003,.rp-250-0004{
+  position:absolute;color:#d2001a;font:700 24px "Poppins",sans-serif;display:flex;align-items:center;z-index:12
+}
+.rp-250-000{left:160px;top:1930px;width:180px}
+.rp-250-0003{left:590px;top:1930px;width:180px}
+.rp-250-0004{left:1030px;top:1930px;width:170px}
+.rp-250-0002{left:1460px;top:1930px;width:180px}
+
+/* CARA PESAN */
+.rectangle-25{top:2040px;width:1920px;height:580px;background:#f1f1f1;z-index:10}
+.bagaimana-cara-pemesanan{
+  position:absolute;left:574px;top:2110px;width:773px;height:50px;display:flex;align-items:center;justify-content:center;color:#d2001a;font:700 40px "Poppins",sans-serif;z-index:11
+}
+.rectangle-262,.rectangle-263,.rectangle-264,.rectangle-265,.rectangle-266{position:absolute;width:120px;height:120px;object-fit:cover;z-index:11}
+.rectangle-263{left:190px;top:2210px}
+.rectangle-264{left:537px;top:2210px}
+.rectangle-262{left:900px;top:2210px}
+.rectangle-265{left:1262px;top:2210px}
+.rectangle-266{left:1610px;top:2210px}
+.login-daftar,.pilih-produk,.tambah-ke-keranjang,.checkout,.pesanan-dikirim{
+  position:absolute;font:600 20px "Poppins",sans-serif;display:flex;align-items:center;justify-content:center;width:230px;height:30px;color:#000;z-index:12
+}
+.login-daftar{left:150px;top:2340px;width:200px}
+.pilih-produk{left:497px;top:2340px;width:200px}
+.tambah-ke-keranjang{left:845px;top:2340px}
+.checkout{left:1222px;top:2340px;width:200px}
+.pesanan-dikirim{left:1570px;top:2340px;width:200px}
+.masuk-ke-akunmu-atau-buat-akun-baru,.telusuri-dan-klik-produk-yang-kamu-inginkan,.klik-tambah-ke-keranjang-atau-pesan-sekarang,.periksa-pesanan-pilih-metode-pembayaran-dan-unggah-bukti-bayar,.tunggu-pesananmu-tiba-dengan-aman{
+  position:absolute;font:400 15px "Poppins",sans-serif;color:#000;display:flex;align-items:center;justify-content:center;z-index:12
+}
+.masuk-ke-akunmu-atau-buat-akun-baru{left:150px;top:2370px;width:200px;height:50px}
+.telusuri-dan-klik-produk-yang-kamu-inginkan{left:497px;top:2370px;width:200px;height:50px}
+.klik-tambah-ke-keranjang-atau-pesan-sekarang{left:860px;top:2370px;width:200px;height:70px}
+.periksa-pesanan-pilih-metode-pembayaran-dan-unggah-bukti-bayar{left:1222px;top:2370px;width:200px;height:70px}
+.tunggu-pesananmu-tiba-dengan-aman{left:1570px;top:2370px;width:200px;height:50px}
+.rectangle-28{position:absolute;left:840px;top:2490px;width:240px;height:60px;border-radius:50px;background:linear-gradient(90deg,#d2001a 0%,#b40016 50%,#950012 100%);z-index:11}
+.pesan-sekarang{position:absolute;left:860px;top:2505px;width:200px;height:30px;display:flex;align-items:center;justify-content:center;color:#fff;font:700 22px "Poppins",sans-serif;z-index:12}
+
+/* FAQ */
+.rectangle-29{top:2620px;width:1920px;height:659px;background:linear-gradient(180deg,#f1f1f1 0%,#fff 100%);z-index:10}
+.fequently-asked-question-faq{position:absolute;left:960px;top:2690px;width:810px;height:60px;display:flex;align-items:center;justify-content:flex-end;color:#d2001a;font:700 45px "Poppins",sans-serif;text-transform:uppercase;z-index:11}
+.rectangle-30{position:absolute;left:980px;top:2770px;width:790px;height:120px;background:#d9d9d9;border-radius:10px;z-index:11}
+.apakah-produk-dante-propolis-aman-digunakan-setiap-hari{position:absolute;left:1000px;top:2790px;width:630px;height:20px;display:flex;align-items:center;color:#fff;font:700 18px "Poppins",sans-serif;z-index:12}
+.ya-produk-kami-terbuat-dari-bahan-alami-dan-sudah-teruji-aman-untuk-penggunaan-harian-sesuai-aturan-pakai{position:absolute;left:1000px;top:2820px;width:630px;height:50px;display:flex;align-items:center;color:#fff;font:400 18px "Poppins",sans-serif;z-index:12}
+.line-27{position:absolute;left:1720px;top:2800px;width:30px;height:0;border-top:3px solid #fff;z-index:12}
+.rectangle-31,.rectangle-32,.rectangle-33,.rectangle-34{position:absolute;left:980px;width:790px;height:60px;border:1px solid #9b9b9b;border-radius:10px;background:transparent;z-index:11}
+.rectangle-31{top:2910px}.rectangle-32{top:2990px}.rectangle-33{top:3070px}.rectangle-34{top:3150px}
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak,.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak2,.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak3,.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak4{
+  position:absolute;left:1000px;width:640px;height:20px;display:flex;align-items:center;color:#000;font:700 18px "Poppins",sans-serif;z-index:12
+}
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak{top:2930px}
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak2{top:3010px}
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak3{top:3090px}
+.apakah-produk-dante-propolis-aman-digunakan-untuk-anak-anak4{top:3170px}
+.line-28,.line-29,.line-31,.line-33{position:absolute;left:1720px;width:30px;height:0;border-top:3px solid #d2001a;z-index:12}
+.line-28{top:2942px}.line-29{top:3022px}.line-31{top:3102px}.line-33{top:3182px}
+.line-6,.line-30,.line-32,.line-34{position:absolute;left:1734px;width:30px;height:0;border-top:3px solid #d2001a;transform:rotate(90deg);z-index:12}
+.line-6{top:2925px}.line-30{top:3005px}.line-32{top:3085px}.line-34{top:3165px}
+.rectangle-342{position:absolute;left:150px;top:2890px;width:790px;height:320px;background:#f1f1f1;border-radius:0 0 50px 50px;z-index:11}
+.rectangle-35{position:absolute;left:495px;top:2890px;width:100px;height:100px;object-fit:cover;z-index:12}
+.apakah-punya-pertanyaan-lain{position:absolute;left:284px;top:3010px;width:522px;height:40px;display:flex;align-items:center;justify-content:center;color:#000;font:700 30px "Poppins",sans-serif;z-index:12}
+.jangan-ragu-untuk-menghubungi-kami-tim-kami-siap-membantu-dengan-cepat-dan-ramah{position:absolute;left:294px;top:3070px;width:502px;height:40px;display:flex;align-items:center;justify-content:center;color:#000;font:400 18px "Poppins",sans-serif;z-index:12}
+.rectangle-38{position:absolute;left:452px;top:3130px;width:187px;height:60px;border-radius:50px;background:#d2001a;z-index:11}
+.hubungi-kami{position:absolute;left:451px;top:3150px;width:189px;height:20px;display:flex;align-items:center;justify-content:center;color:#fff;font:700 22px "Poppins",sans-serif;z-index:12}
+.rectangle-37{position:absolute;left:151px;top:2700px;width:789px;height:180px;border-radius:50px 50px 0 0;object-fit:cover;z-index:11}
+
+/* CONTACT */
+.rectangle-39{top:3280px;width:1920px;height:390px;background:linear-gradient(180deg,#fff 0%,#e9808c 50%,#d2001a 100%);z-index:10}
+.rectangle-40{position:absolute;left:160px;top:3280px;width:510px;height:390px;object-fit:cover;z-index:11}
+.tetap-terhubung-dengan-kami{position:absolute;left:950px;top:3320px;width:820px;height:72px;display:flex;align-items:center;color:#d2001a;-webkit-text-stroke:1px #fff;font:700 48px "Poppins",sans-serif;z-index:11}
+.kami-senang-bisa-lebih-dekat-denganmu{position:absolute;left:950px;top:3410px;width:641px;height:40px;display:flex;align-items:center;color:#fff;font:400 24px "Poppins",sans-serif;z-index:11}
+.hubungi-kami-untuk-konsultasi-produk-pemesanan-atau-kerja-sama{position:absolute;left:950px;top:3458px;width:496px;height:40px;display:flex;align-items:center;color:#fff;font:400 16px "Poppins",sans-serif;z-index:11}
+.whats-app,.email,.instagram{position:absolute;top:3530px;width:60px;height:60px;object-fit:cover;z-index:11}
+.whats-app{left:950px}.email{left:1050px}.instagram{left:1150px}
+
+/* FOOTER */
+.rectangle-402{top:3670px;width:1920px;height:450px;background:linear-gradient(180deg,rgba(210,0,26,1) 40%,rgba(88,0,11,1) 100%);z-index:10}
+.dante-propolis3{
+  position:absolute;left:150px;top:3730px;width:490px;height:56.66px;z-index:20;
+  color:#fff;text-align:right;font:400 40px "Racing Sans One",sans-serif
+}
+/* Tagline footer: BRITISH PROPOLIS pakai Racing Sans One */
+.distributor-resmi-british-propolis2{
+  position:absolute;left:283.07px;top:3779.72px;width:356.93px;height:24.28px;z-index:20;
+  color:#fff;text-align:right;font-size:12px;line-height:1.1
+}
+.distributor-resmi-british-propolis-2-span{font-family:"Poppins",sans-serif}
+.distributor-resmi-british-propolis-2-span2{font-family:"Racing Sans One",sans-serif}
+
+.dante-propolis-adalah-distributor-resmi-british-propolis-dan-produk-kesehatan-alami-terpercaya-kami-berkomitmen-menyediakan-produk-berkualitas-tinggi-untuk-mendukung-gaya-hidup-sehat-anda{
+  position:absolute;left:150px;top:3824px;width:490px;height:216px;z-index:20;
+  color:#fff;text-align:justify;font:400 24px "Poppins",sans-serif
+}
+.navigasi-cepat,.informasi-toko{
+  position:absolute;top:3780px;height:30px;z-index:20;color:#fff;text-align:justify;font:600 24px "Poppins",sans-serif
+}
+.navigasi-cepat{left:960px;width:210px}
+.informasi-toko{left:1360px;width:210px}
+.beranda2,.produk2,.tentang-kami2,.jl-contoh-no-45-jakarta,._0812-3456-7891,.support-dantepropolis-com,.jam-operasional-07-00-17-00-wib{
+  position:absolute;z-index:20;color:#fff;text-align:justify;font:400 20px "Poppins",sans-serif
+}
+.beranda2{left:1000px;top:3830px;width:177px;height:30px}
+.produk2{left:1000px;top:3880px;width:210px;height:30px}
+.tentang-kami2{left:1000px;top:3930px;width:210px;height:30px}
+
+.jl-contoh-no-45-jakarta{left:1400px;top:3830px;width:268px;height:30px}
+._0812-3456-7891{left:1400px;top:3880px;width:268px;height:30px}
+.support-dantepropolis-com{left:1400px;top:3928px;width:328px;height:30px}
+.jam-operasional-07-00-17-00-wib{left:1402px;top:3980px;width:368px;height:30px}
+
+.home,.product,.bee,.map,.phone,.email2,.clock{position:absolute;width:30px;height:30px;object-fit:cover;z-index:20}
+.home{left:960px;top:3830px}.product{left:960px;top:3880px}.bee{left:960px;top:3932px}
+.map{left:1360px;top:3830px}.phone{left:1360px;top:3880px}.email2{left:1360px;top:3930px}.clock{left:1360px;top:3980px}
+
+.line-13{position:absolute;left:150px;top:4060px;width:1610px;height:0;border-top:1px solid #fff;z-index:20}
+._2025-dante-propolis-all-rights-reserved-project-by-2-itsolution{
+  position:absolute;left:669px;top:4075px;width:582px;height:30px;z-index:20;
+  color:#d9d9d9;text-align:justify;font:400 18px "Poppins",sans-serif
+}
+
+/* MEDIA SAFETY */
+img,video,svg,canvas{max-width:100%;height:auto;display:block}
